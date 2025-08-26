@@ -1,21 +1,33 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import custoBackground from '../assets/custo_background.webp';
+import Hero from "./Hero.astro";
 ---
 
-<div id="container">
-	<main>
-		<section id="hero">
-			<h1> here we go :D </h1>
-		</section>
-	</main>
+<div class="bg-white flex flex-col justify-center p-2">
+	<div class="rounded-2xl">
+        <img src={custoBackground.src} alt="" fetchpriority="high" class="absolute" />
+        <main class="pt-[9.5rem]">
+            <Hero/>
+        </main>
+    </div>
 
 </div>
 
 <style>
 
+
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+	}
+
 	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		font-family: Inter, sans-serif;
 		height: 100%;
 	}
 

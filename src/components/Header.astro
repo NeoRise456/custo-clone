@@ -1,0 +1,20 @@
+---
+import custoLogo from '../assets/custo_logo.svg';
+---
+
+<header class="w-full h-auto min-h-[5.5rem] px-16 flex items-center absolute">
+    <div class="w-full max-w-[67rem] h-full flex items-center justify-between gap-10 mx-auto">
+        <img src={custoLogo.src} alt="Custo Logo" width="92" height="24" fetchpriority="high"/>
+        <div class="flex justify-between items-center w-full text-sm ">
+            <nav class="flex gap-4 text-sm">
+                <a class="px-3 py-2 ">About</a>
+                <a class="px-3 py-2">Pricing</a>
+                <a class="px-3 py-2">Blog</a>
+            </nav>
+            <div class="flex gap-4 font-medium">
+                <a class="px-6 py-2 border rounded-full"> Contact Sales </a>
+                <a class="px-6 py-2 border rounded-full"> Start for Free </a>
+            </div>
+        </div>
+    </div>
+</header>
