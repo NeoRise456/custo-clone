@@ -1,3 +1,51 @@
 ---
-
+import meetingWindow from '../assets/meeting_window.webp';
+import satisticsIcon from '../assets/icons/statistics.svg';
 ---
+
+
+<section class="py-24 px-10">
+    <div class="container-large flex flex-col gap-16">
+        <div class="flex flex-col justify-start items-center gap-4 text-center">
+            <h2 class="text-[2.5rem] font-medium">Elevate Business Growth</h2>
+            <p class="text-gray-600 text-lg">
+                Scale your business effortlessly with a powerful and intuitive CRM solutions.
+            </p>
+        </div>
+        <div class="p-10 grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-10 border border-gray-200 rounded-2xl">
+            <div class="flex flex-col gap-8">
+                <div class="w-full h-full overflow-hidden">
+                    <img src={meetingWindow.src} alt="Custo Meeting Window" class="max-h-[19.5rem] w-full h-full object-cover"  />
+                </div>
+                <div class="flex flex-row justify-start items-center gap-6">
+                    <img src={satisticsIcon.src} alt="statistics logo">
+                    <div class="flex flex-col gap-2 w-full">
+                        <p class="text-2xl font-semibold">
+                            Task Automation
+                        </p>
+                        <p class="text-gray-600 font-medium text-lg">
+                            Automate follow-ups to reduce manual work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-gray-200"/>
+            <div class="flex flex-col gap-8">
+                <div class="w-full h-full overflow-hidden">
+                    <img src={meetingWindow.src} alt="Custo Meeting Window" class="max-h-[19.5rem] w-full h-full object-cover"  />
+                </div>
+                <div class="flex flex-row justify-start items-center gap-6">
+                    <img src={satisticsIcon.src} alt="statistics logo">
+                    <div class="flex flex-col gap-2 w-full">
+                        <p class="text-2xl font-semibold">
+                            Meeting Organizer
+                        </p>
+                        <p class="text-gray-600 font-medium text-lg">
+                            Manage deals at every stage faster.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
