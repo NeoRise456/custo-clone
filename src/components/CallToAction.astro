@@ -1,0 +1,28 @@
+---
+import fadedBackground from '../assets/faded_background.webp';
+---
+
+
+<section class="rounded-2xl relative overflow-hidden">
+    <img src={fadedBackground.src}
+         alt="" fetchpriority="high"
+         class="absolute inset-0 w-full h-full object-cover" />
+
+    <div class=" py-14 px-10 relative">
+        <div class="px-10 py-6 text-center flex flex-col gap-8">
+            <div class="flex flex-col max-w-[41.7rem] mx-auto gap-6 ">
+                <h2 class="text-5xl font-medium">
+                    Start Growing with Custo Now
+                </h2>
+                <p class="text-gray-600 text-xl">
+                    Take control of your sales pipeline, automate tasks, and build stronger customer relationships with ease.
+                </p>
+            </div>
+            <div class="flex justify-center ">
+                <a class="px-6 py-3 rounded-full text-white  bg-gradient-to-b from-gray-950 from-[40%] to-[#6d7a97] hover:from-[#6d7a97] hover:from-[5%] hover:to-gray-950 text-md font-medium">
+                    Start for Free
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

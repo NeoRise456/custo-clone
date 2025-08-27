@@ -1,7 +1,98 @@
 ---
-
+import arrow from '../assets/icons/arrow.svg';
+import linkedinLogo from '../assets/icons/linkedin.svg';
+import custoLogo from '../assets/custo_logo.svg';
+import fadedLogo from '../assets/faded_logo.webp';
 ---
 
-<footer class="rounded-2xl">
+<footer class="rounded-2xl text-white font-medium bg-gradient-to-b from-[#0e121b] from-[38.93%] to-[#2b303b] to-[80.86%] overflow-hidden relative">
+    <img src={fadedLogo.src} class="absolute bottom-0 left-10" width="560"/>
+    <div class="container-large">
+        <div class="py-16 flex justify-between">
+            <div class="flex flex-col gap-6">
+                <div class="max-w-60 flex flex-col gap-3">
+                    <img src={custoLogo.src} class="brightness-0 invert"
+                         alt="Custo Logo" width="92" height="24" fetchpriority="high"/>
+                    <p class="text-sm text-gray-400">
+                        Simplify customer relationships and scale your business with Custo.
+                    </p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a class="text-white">
+                        <img src={linkedinLogo.src}
+                             alt="Socials" width="25"/>
+                    </a>
+                    <a class="text-white">
+                        <img src={linkedinLogo.src}
+                             alt="Socials" width="25"/>
+                    </a>
+                    <a class="text-white">
+                        <img src={linkedinLogo.src}
+                             alt="Socials" width="25"/>
+                    </a>
+                    <a class="text-white">
+                        <img src={linkedinLogo.src}
+                             alt="Socials" width="25"/>
+                    </a>
 
+
+                </div>
+            </div>
+            <div class="flex gap-[7.5rem]">
+                <div class="flex flex-col justify-start items-stretch gap-3">
+                    <p class="text-md text-white"> Quick Links</p>
+                    <div class="text-gray-400 flex flex-col gap-2 text-sm">
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Benefits</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Features</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Testimonials</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> FAQs </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-start items-stretch gap-2">
+                    <p class="text-md text-white"> Main Pages</p>
+                    <div class="text-gray-400 flex flex-col gap-2 text-sm">
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Home</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> About</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Pricing</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Contact </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-start items-stretch gap-2">
+                    <p class="text-md text-white"> Other Pages</p>
+                    <div class="text-gray-400 flex flex-col gap-2 text-sm">
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Blog</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Blog Details</a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Error 404 </a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Licences </a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Changelog </a>
+                        <a class="transition-colors duration-100 ease-in-out  hover:text-white"> Style Guide </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-600 py-6 flex justify-between items-center text-md">
+            <p class=" ">2025 © Juan Astonitas</p>
+            <div class="flex gap-4">
+                <a class="flex justify-center items-center gap-2 ">
+                    <div class=" underline ">
+                        Get this Template
+                    </div>
+                    <img src={arrow.src} alt="Arrow" width="12" height="12" />
+                </a>
+                <div class="flex justify-center gap-1 ">
+                    <div class=" text-gray-400">
+                        Or want to collaborate?
+                    </div>
+                    <a class="flex justify-center items-center gap-2 ">
+                        <div class=" underline ">
+                            Let's Connect
+                        </div>
+                        <img src={arrow.src} alt="Arrow" width="12" height="12" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

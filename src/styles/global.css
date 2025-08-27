@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@utility container-large {
+    @apply w-full max-w-[67rem] mx-auto;
+}
