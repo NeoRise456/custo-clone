@@ -3,6 +3,8 @@ import custoBackground from '../assets/custo_background.webp';
 import dashboard from '../assets/dashboard.webp';
 import window from '../assets/window.webp';
 import arrow from '../assets/icons/arrow.svg';
+import badges from '../assets/icons/badges.svg';
+import star from '../assets/icons/star.svg';
 ---
 
 
@@ -14,14 +16,14 @@ import arrow from '../assets/icons/arrow.svg';
 
     <div class="pt-[9.5rem] min-h-screen bg-[linear-gradient(180deg,#e1f7ed,#e1f7ed_50%,#e1f7ed00_96.9%)]">
         <div class="absolute inset-0">
-            <div class="blur-[100px] h-10/12 inset-0 bg-[linear-gradient(270deg,#0000,#6bf4c7_48%,#0000)]"/>
+            <div class="blur-[100px] h-6/12 inset-0 bg-[linear-gradient(270deg,#0000,#6bf4c7_48%,#0000)]"/>
         </div>
         <div class="px-10">
             <div class="container-large">
                 <div class="relative w-full flex flex-col justify-start items-stretch gap-12">
                     <div class="flex flex-col justify-start items-stretch gap-8">
                         <div class="flex justify-center ">
-                            <a class="rounded-full ">
+                            <a class="rounded-full border-[linear-gradient(#ffffff83_0%,#9de2cdcc_15%,#9de2cdc1_85%,#ffffffa3_100%)] bg-[#ffffff3d] shadow-[inset_0_-1px_18px_#fff6,0_2px_8px_#0000000f] hover:bg-[#fff6]">
                                 <div class="py-2 px-4 flex justify-center gap-2">
                                     <div class="text-xs font-medium">Introducing Custo</div>
                                     <img src={arrow.src}
@@ -34,7 +36,7 @@ import arrow from '../assets/icons/arrow.svg';
                             <h1 class="text-6xl font-semibold leading-tight">
                                 Powerful CRM Solutions for Growing Businesses
                             </h1>
-                            <p class="text-gray-600 text-xl font-medium">
+                            <p class="text-gray-600 text-xl">
                                 Streamline your customer relationships with an intuitive CRM platform. Optimize workflows, and drive business growth with ease.
                             </p>
                         </div>
@@ -45,8 +47,30 @@ import arrow from '../assets/icons/arrow.svg';
                         </div>
                     </div>
 
-                    <div>
-                        rate
+                    <div class="flex justify-between items-center">
+                        <div class="max-w-2xs flex justify-start items-center gap-4">
+                            <img src={badges.src} width="72" height="32" alt="companies list">
+                            <p class="text-gray-600 font-medium text-[1rem]">
+                                Trusted by 3K+ companies around the world
+                            </p>
+                        </div>
+                        <div class="max-w-64 flex justify-start items-center gap-6">
+                            <p class="text-[2.5rem] font-medium">
+                                4.9
+                            </p>
+                            <div class="flex flex-col gap-1">
+                                <div class="flex gap-1">
+                                    <img src={star.src} width="20" alt="star">
+                                    <img src={star.src} width="20" alt="star">
+                                    <img src={star.src} width="20" alt="star">
+                                    <img src={star.src} width="20" alt="star">
+                                    <img src={star.src} width="20" alt="star">
+                                </div>
+                                <p class="text-gray-600 font-medium text-xl">
+                                    Based on 200+ reviews
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="relative h-full">
