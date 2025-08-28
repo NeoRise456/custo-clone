@@ -5,10 +5,10 @@ import custoLogo from '../assets/custo_logo.svg';
 import fadedLogo from '../assets/faded_logo.webp';
 ---
 
-<footer class="rounded-2xl text-white font-medium bg-gradient-to-b from-[#0e121b] from-[38.93%] to-[#2b303b] to-[80.86%] overflow-hidden relative">
+<footer class="rounded-2xl px-10 text-white font-medium bg-gradient-to-b from-[#0e121b] from-[38.93%] to-[#2b303b] to-[80.86%] overflow-hidden relative">
     <img src={fadedLogo.src} class="absolute bottom-0 left-10" width="560"/>
     <div class="container-large">
-        <div class="py-16 flex justify-between">
+        <div class="py-16 flex flex-col gap-10 sm:flex-row  justify-between">
             <div class="flex flex-col gap-6">
                 <div class="max-w-60 flex flex-col gap-3">
                     <img src={custoLogo.src} class="brightness-0 invert"
@@ -38,7 +38,7 @@ import fadedLogo from '../assets/faded_logo.webp';
 
                 </div>
             </div>
-            <div class="flex gap-[7.5rem]">
+            <div class="flex gap-8 lg:gap-[7.5rem]">
                 <div class="flex flex-col justify-start items-stretch gap-3">
                     <p class="text-lg text-white"> Quick Links</p>
                     <div class="text-gray-400 flex flex-col gap-2 text-sm">
