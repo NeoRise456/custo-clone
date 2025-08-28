@@ -54,14 +54,17 @@
 
 <script>
 
-    import { animate, inView } from "motion";
+    import { inView, animate, stagger } from "motion";
 
-    inView(".stats-animate > div", (el) => {
-        animate(
-            el,
-            { opacity: [0, 1], y: [-100, 0] },
-            { duration: 1, easing: "easeInOut" }
-        );
-    });
+    inView(".stats-animate > div",
+        (el) => {
+            animate(
+                el,
+                { opacity: [0, 1], y: [100, 0] },
+                { duration: 1, easing: "easeInOut",delay: stagger(0.2, { start: 0.1 }) }
+            );
+        },
+        { amount: 1 }
+    );
 
 </script>

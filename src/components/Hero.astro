@@ -7,12 +7,9 @@ import badgesIcon from '../assets/icons/badges.svg';
 import starIcon from '../assets/icons/star.svg';
 ---
 
-
 <section class="rounded-2xl overflow-hidden">
-
     <img src={custoBackground.src} alt="" fetchpriority="high"
-         class="absolute max-h-[61.8125rem] w-full object-contain" />
-
+         class="absolute max-h-[61.8125rem] max-w-dvw object-contain" />
 
     <div class="pt-[9.5rem] min-h-screen overflow-hidden bg-[linear-gradient(180deg,#e1f7ed,#e1f7ed_50%,#e1f7ed00_96.9%)]">
         <div class="absolute inset-0">
@@ -20,10 +17,10 @@ import starIcon from '../assets/icons/star.svg';
         </div>
         <div class="px-10">
             <div class="container-large">
-                <div class="relative w-full flex flex-col justify-start items-stretch gap-12">
+                <div class="relative w-full flex flex-col justify-start items-stretch gap-12 hero-animate">
                     <div class="flex flex-col justify-start items-stretch gap-8">
-                        <div class="flex justify-center ">
-                            <a class="rounded-full border-[linear-gradient(#ffffff83_0%,#9de2cdcc_15%,#9de2cdc1_85%,#ffffffa3_100%)] bg-[#ffffff3d] shadow-[inset_0_-1px_18px_#fff6,0_2px_8px_#0000000f] hover:bg-[#fff6]">
+                        <div class="flex justify-center">
+                            <a class="rounded-full border-[linear-gradient(#ffffff83_0%,#9de2cdcc_15%,#9de2cdc1_85%,#ffffffa3_100%)] bg-[#ffffff3d] shadow-[inset_0_-1px_18px_#fff6,0_2px_8px_#0000000f] hover:bg-[#fff6] hero-item opacity-0 translate-y-6 will-change-transform">
                                 <div class="py-2 px-4 flex justify-center gap-2">
                                     <div class="text-xs font-medium">Introducing Custo</div>
                                     <img src={arrowIcon.src}
@@ -33,28 +30,28 @@ import starIcon from '../assets/icons/star.svg';
                             </a>
                         </div>
                         <div class="max-w-[42.5rem] mx-auto text-center flex flex-col gap-4">
-                            <h1 class="text-6xl font-semibold leading-tight">
+                            <h1 class="text-6xl font-semibold leading-tight hero-item opacity-0 translate-y-6 will-change-transform">
                                 Powerful CRM Solutions for Growing Businesses
                             </h1>
-                            <p class="text-gray-600 text-xl">
+                            <p class="text-gray-600 text-xl hero-item opacity-0 translate-y-6 will-change-transform">
                                 Streamline your customer relationships with an intuitive CRM platform. Optimize workflows, and drive business growth with ease.
                             </p>
                         </div>
-                        <div class="flex justify-center ">
-                            <a class="px-6 py-3 rounded-full text-white  bg-gradient-to-b from-gray-950 from-[40%] to-[#6d7a97] hover:from-[#6d7a97] hover:from-[5%] hover:to-gray-950 text-md font-medium">
+                        <div class="flex justify-center">
+                            <a class="px-6 py-3 rounded-full text-white bg-gradient-to-b from-gray-950 from-[40%] to-[#6d7a97] hover:from-[#6d7a97] hover:from-[5%] hover:to-gray-950 text-md font-medium hero-item opacity-0 translate-y-6 will-change-transform">
                                 Start for Free
                             </a>
                         </div>
                     </div>
 
                     <div class="flex justify-between items-center">
-                        <div class="max-w-2xs flex justify-start items-center gap-4">
+                        <div class="max-w-2xs flex justify-start items-center gap-4 hero-item opacity-0 translate-y-6 will-change-transform">
                             <img src={badgesIcon.src} width="72" height="32" alt="companies list">
                             <p class="text-gray-600 font-medium text-[1rem]">
                                 Trusted by 3K+ companies around the world
                             </p>
                         </div>
-                        <div class="max-w-64 flex justify-start items-center gap-6">
+                        <div class="max-w-64 flex justify-start items-center gap-6 hero-item opacity-0 translate-y-6 will-change-transform">
                             <p class="text-[2.5rem] font-medium">
                                 4.9
                             </p>
@@ -73,18 +70,31 @@ import starIcon from '../assets/icons/star.svg';
                         </div>
                     </div>
 
-                    <div class="relative h-full">
+                    <div class="relative h-full opacity-0 translate-y-6 hero-item will-change-transform">
                         <img src={custoDashboard.src} alt="Custo Dashboard" fetchpriority="high"
-                             class="w-full h-full shadow-[0_-8px_20px_#0000000a]"/>
+                             class="w-full h-full shadow-[0_-8px_20px_#0000000a] "/>
                         <img src={lambdaWindow.src} alt="Custo Lambda Window" fetchpriority="high"
                              class="max-w-56 absolute right-[-5%] bottom-[20%]"/>
-
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<script>
+    import { inView, animate, stagger } from "motion";
 
+    inView(".hero-animate", (el) => {
+        const items = el.querySelectorAll(".hero-item");
+        animate(
+            items,
+            { opacity: [0, 1], y: [24, 0] },
+            {
+                duration: 0.6,
+                ease: "easeInOut",
+                delay: stagger(0.15)
+            }
+        );
+    }, { amount: 0.2 });
+</script>

@@ -31,11 +31,16 @@ import fadedBackground from '../assets/faded_background.webp';
 <script>
     import { inView, animate, stagger } from "motion";
 
-    inView(".cta-animate", () => {
+    inView(".cta-animate", (el) => {
+        const items = el.querySelectorAll(".cta-item");
         animate(
-            ".cta-animate .cta-item",
-            { opacity: [0, 1], y: [100, 0] },
-            { duration: 0.4, easing: "easeInOut", delay: stagger(0.15) }
+            items,
+            { opacity: [0, 1], y: [24, 0] },
+            {
+                duration: 0.2,
+                ease: "easeInOut",
+                delay: stagger(0.2, { start: 0.1 })
+            }
         );
-    });
+    }, { amount: 0.2 });
 </script>
