@@ -1,3 +1,43 @@
 ---
 
+import menImage from '../assets/men.webp';
+import starIcon from '../assets/icons/star.svg';
 ---
+
+
+<section class="flex flex-col py-24">
+    <div class="flex flex-col justify-start items-center gap-4 text-center">
+        <h2 class="font-medium text-5xl">Real Stories from Real Users</h2>
+        <p class="text-xl text-gray-600">
+            Hear how Custo has helped businesses close more deals, collaborate better, and stay organized.
+        </p>
+    </div>
+    <div class="w-dvw min-h-80 py-16 px-10 relative overflow-hidden">
+        <div class="w-full h-full flex justify-start items-stretch gap-4">
+            <div class="relative overflow-hidden inset-0 p-0 max-w-[18.375rem] w-full flex flex-row justify-center gap-4 items-center border border-gray-200 rounded-2xl">
+                <img src={menImage.src} alt="a men :D" class="inset-0 absolute w-full h-full saturate-0 object-cover"/>
+                <div class="absolute inset-0 w-full h-full bg-[#0e121b3d] backdrop-blur-xs"/>
+            </div>
+            <div class="w-full p-8 flex flex-col justify-between items-start gap-8 border border-gray-200 rounded-2xl">
+                <div class="flex gap-1">
+                    <img src={starIcon.src} width="20" alt="star">
+                    <img src={starIcon.src} width="20" alt="star">
+                    <img src={starIcon.src} width="20" alt="star">
+                    <img src={starIcon.src} width="20" alt="star">
+                    <img src={starIcon.src} width="20" alt="star">
+                </div>
+                <p class="text-lg text-gray-600">
+                    “Implementing Custo has been a game changer for our sales team. We’ve automated routine tasks, gained better visibility into our deals, and significantly reduced follow-up delays. Everything feels more connected, efficient, and aligned with our goals.”
+                </p>
+                <div class="flex flex-col gap-1">
+                    <p class="font-medium text-xl">
+                        Johnathan Doe
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Growth Strategist, Novacore Ventures
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
