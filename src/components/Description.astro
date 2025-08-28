@@ -59,10 +59,8 @@ import meetingWindow from '../assets/meeting_window.webp';
         if (el.dataset.animated) return;
         el.dataset.animated = 'true';
 
-        // Animate the group container
         animate(el, { opacity: [0, 1], y: [24, 0] }, { duration: 0.6, ease: 'easeOut' });
 
-        // Stagger inner feature items (if any)
         const items = el.querySelectorAll('.feature-item');
         animate(
             items,
