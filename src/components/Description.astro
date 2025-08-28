@@ -1,17 +1,24 @@
 ---
 import secondaryFadedBackground from '../assets/secondaryFadedBackground.webp';
-
+import lambdaWindow from '../assets/lambda_window.webp';
+import meetingWindow from '../assets/meeting_window.webp';
 ---
 
 <section class="py-16 px-10">
-    <div class="container-large">
+    <div class="container-large flex flex-col gap-20">
         <div class="grid grid-cols-1   lg:grid-cols-2 gap-10 ">
-            <div class="overflow-hidden rounded-2xl w-full max-w-full lg:max-w-[28.375rem]  ">
+            <div class="overflow-hidden rounded-2xl w-full max-w-full lg:max-w-[28.375rem] relative">
                 <img src={secondaryFadedBackground.src} alt="a faded background, but its secondary"
-                        class="w-full h-full object-cover"
+                     class="w-full h-full object-cover"
                 />
+
+                <div class="inset-0 z-10 absolute w-full h-full flex flex-col items-center justify-center gap-4">
+                    <img src={meetingWindow.src} alt="lambda window"
+                         class="w-full h-full max-h-[22.5rem] object-cover self-center absolute"
+                    />
+                </div>
             </div>
-            <div class="max-w-[32.875rem] flex flex-col gap-4 order-first lg:order-last">
+            <div class="max-w-[32.875rem] flex flex-col gap-4 justify-center order-first lg:order-last">
                 <p class="text-lg font-medium text-[#00ad75]">
                     Analytics & Reporting
                 </p>
@@ -20,6 +27,58 @@ import secondaryFadedBackground from '../assets/secondaryFadedBackground.webp';
                 </p>
                 <p class="text-lg text-gray-600">
                     Get real-time insights into sales performance, customer behavior, and business growth.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1   lg:grid-cols-2 gap-10 ">
+            <div class="overflow-hidden rounded-2xl w-full max-w-full lg:max-w-[28.375rem] relative">
+                <img src={secondaryFadedBackground.src} alt="a faded background, but its secondary"
+                     class="w-full h-full object-cover"
+                />
+
+                <div class="inset-0 z-10 absolute w-full h-full flex flex-col items-center justify-center gap-4">
+                    <img src={lambdaWindow.src} alt="lambda window"
+                         class="w-full h-full max-h-[22.5rem] object-cover self-center absolute"
+                    />
+                </div>
+            </div>
+            <div class="max-w-[32.875rem] flex flex-col gap-4 justify-center order-first lg:order-last">
+                <p class="text-lg font-medium text-[#00ad75]">
+                    Multi-User Collaboration
+                </p>
+                <p class="font-semibold text-4xl">
+                    Empower Your Team with Real-Time Sync
+                </p>
+                <p class="text-lg text-gray-600">
+                    Collaborate effortlessly with your team by sharing information, notes, and real-time updates.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1   lg:grid-cols-2 gap-10 ">
+            <div class="overflow-hidden rounded-2xl w-full max-w-full lg:max-w-[28.375rem] relative">
+                <img src={secondaryFadedBackground.src} alt="a faded background, but its secondary"
+                     class="w-full h-full object-cover"
+                />
+
+                <div class="inset-0 z-10 absolute w-full h-full flex flex-col items-center justify-center gap-4">
+                    <img src={meetingWindow.src} alt="lambda window"
+                         class="w-full h-full max-h-[22.5rem] object-cover self-center absolute"
+                    />
+                </div>
+            </div>
+            <div class="max-w-[32.875rem] flex flex-col gap-4 justify-center order-first lg:order-last">
+                <p class="text-lg font-medium text-[#00ad75]">
+                    Email Integration
+                </p>
+                <p class="font-semibold text-4xl">
+                    Manage Emails Without Leaving Your CRM
+                </p>
+                <p class="text-lg text-gray-600">
+                    Sync with your email to send, receive, and track conversations directly from the CRM
                 </p>
             </div>
 

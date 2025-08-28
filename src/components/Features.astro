@@ -3,18 +3,17 @@ import meetingWindow from '../assets/meeting_window.webp';
 import satisticsIcon from '../assets/icons/statistics.svg';
 ---
 
-
 <section class="py-24 px-10">
-    <div class="container-large flex flex-col gap-16 ">
+    <div class="container-large flex flex-col gap-16 features-animate">
         <div class="flex flex-col justify-start items-center gap-4 text-center">
-            <h2 class="text-[2.5rem] font-medium title">Elevate Business Growth</h2>
-            <p class="text-gray-600 text-lg">
+            <h2 class="text-[2.5rem] font-medium title features-item opacity-0 translate-y-6 will-change-transform">Elevate Business Growth</h2>
+            <p class="text-gray-600 text-lg features-item opacity-0 translate-y-6 will-change-transform">
                 Scale your business effortlessly with a powerful and intuitive CRM solutions.
             </p>
         </div>
 
-        <div class="p-10 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 border border-gray-200 rounded-2xl">
-            <div class="flex flex-col gap-8">
+        <div class="p-10 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 border border-gray-200 rounded-2xl features-item opacity-0 translate-y-6 will-change-transform">
+            <div class="flex flex-col gap-8 grid-item opacity-0 translate-y-6 will-change-transform">
                 <div class="w-full h-full overflow-hidden">
                     <img src={meetingWindow.src} alt="Custo Meeting Window" class="max-h-[19.5rem] w-full h-full object-cover"  />
                 </div>
@@ -31,7 +30,7 @@ import satisticsIcon from '../assets/icons/statistics.svg';
                 </div>
             </div>
             <div class="border border-gray-200"/>
-            <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-8 grid-item opacity-0 translate-y-6 will-change-transform">
                 <div class="w-full h-full overflow-hidden">
                     <img src={meetingWindow.src} alt="Custo Meeting Window" class="max-h-[19.5rem] w-full h-full object-cover"  />
                 </div>
@@ -51,9 +50,33 @@ import satisticsIcon from '../assets/icons/statistics.svg';
     </div>
 </section>
 
-
 <script>
-    import { animate, inView } from "motion";
+    import { animate, inView, stagger } from "motion";
 
+    inView(".features-animate", (el) => {
+        const mainItems = el.querySelectorAll(".features-item");
+        const gridItems = el.querySelectorAll(".grid-item");
 
+        // Animate main items first
+        animate(
+            mainItems,
+            { opacity: [0, 1], y: [24, 0] },
+            {
+                duration: 0.6,
+                ease: "easeInOut",
+                delay: stagger(0.15)
+            }
+        );
+
+        // Animate both grid items with scale and fade
+        animate(
+            gridItems,
+            { opacity: [0, 1], y: [24, 0], scale: [0, 1] },
+            {
+                duration: 0.6,
+                ease: "easeInOut",
+                delay: 0.4
+            }
+        );
+    }, { amount: 0.2 });
 </script>
