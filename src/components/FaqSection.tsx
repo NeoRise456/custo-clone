@@ -1,6 +1,6 @@
 import cross from '../assets/icons/cross.svg';
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, type Variants } from 'motion/react';
 
 const questions = [
     { question: 'How do I get started with Custo?', answer: 'Simply sign up, choose a plan, and start organizing your CRM in minutes, no setup required.' },
@@ -15,19 +15,19 @@ const questions = [
     { question: 'How often is Custo updated with new features?', answer: 'Custo receives regular updates with new features, performance improvements, and security patches to ensure your CRM stays fast, secure, and reliable.' }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: {},
     show: {
         transition: { staggerChildren: 0.15 }
     }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 24 },
     show: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: 'easeInOut' }
+        transition: { duration: 0.6, ease: [0.42, 0, 0.58, 1] }
     }
 };
 
@@ -76,7 +76,7 @@ export default function FaqSection() {
                                         initial={false}
                                         animate={
                                             isOpen
-                                                ? { scaleX: 1, transition: { duration: 0.25, ease: 'easeOut' } }
+                                                ? { scaleX: 1, transition: { duration: 0.25, ease: [0.33, 1, 0.68, 1] } }
                                                 : { scaleX: 0, transition: { duration: 0 } }
                                         }
                                         style={{ transformOrigin: 'left', width: '100%' }}
