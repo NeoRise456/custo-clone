@@ -1,8 +1,13 @@
 
 export default function SecondaryButton(){
+
+    const signupUrl = import.meta.env.PUBLIC_LOGIN_LINK;
+
     return (
-        <button className="px-6 py-3  rounded-full bg-white hover:bg-gray-50">
+        <a
+            href={signupUrl}
+            className="px-6 py-3  rounded-full bg-white hover:bg-gray-50">
             Contact Sales
-        </button>
+        </a>
     );
 }
